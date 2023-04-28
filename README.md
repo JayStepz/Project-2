@@ -1,6 +1,9 @@
 # E-Shop App
 Make a generic store app.
 
+# Collaborators
+* Chris Bailey
+
 ## Notes
 Let users create and log into accounts.
 Store user and product info within a database.
