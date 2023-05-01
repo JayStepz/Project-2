@@ -1,30 +1,30 @@
 # E-Shop App
-Make a generic store app.
+* Make a generic store app.
 
 # Collaborators
 * Chris Bailey
 
 ## Notes
-Let users create and log into accounts.
-Store user and product info within a database.
-Pull products from a database.
-Order confirmation after checkout
-Time-based integration (same-day shipping offer?/time stamp orders?)
-Customer/Order memory
-Look into on demand loading, infinite scrolling, pagination
-Tiny.png for image re-sizing
-New Tech: TypeScript
+* Let users create and log into accounts.
+* Store user and product info within a database.
+* Pull products from a database.
+* Order confirmation after checkout
+* Time-based integration (same-day shipping offer?/time stamp orders?)
+* Customer/Order memory
+* Look into on demand loading, infinite scrolling, pagination
+* Tiny.png for image re-sizing
+* New Tech: TypeScript
 
 ## Layout
-Home Page
-Categorized Pages
-Individual product pages? Pop-out modals?
-Shopping Cart page
-Log-in page/Account create
-Check-out page
+* Home Page
+* Categorized Pages
+* Individual product pages? Pop-out modals?
+* Shopping Cart page
+* Log-in page/Account create
+* Check-out page
 
 ## Database
-Database itself
+* Database itself
 
 Product Table
 - id
@@ -48,17 +48,17 @@ Order Table
 - timestamp
 
 ## Backend Notes
-Server.js
+* Server.js
 
-config folder
+* config folder
 - connection.js
 
-database folder
+* database folder
 - schema.sql
     - DROP DATABASE IF EXISTS
     - CREATE DATABASE
 
-seeds folder
+* seeds folder
 - product images folder
     - images
 - product seeds
@@ -66,12 +66,12 @@ seeds folder
     - productData.json
     - userData.json
 
-models folder
+* models folder
 - User.js
 - Product.js
 - Order.js
 
-routes folder
+* routes folder
 - homepage.js
     - Get route "/" to storefront
 - category.js
@@ -85,7 +85,7 @@ routes folder
 - checkout.js
     - Get route "/cart/checkout"
 
-handlebars folder
+* handlebars folder
 - main.handlebars
 - category.handlebars
 - product.handlebars
@@ -93,10 +93,10 @@ handlebars folder
 - cart.handlebars
 - checkout.handlebars
 
-public folder
+* public folder
 - css files
 
-utils folder
+* utils folder
 - auth.js / log-in and account creation
 - id_gen.js / generate confirmation number and order number
 - process.js / verify stock, process order, conf on good stock, reject on lack of stock
