@@ -8,7 +8,7 @@ const sequelize_store = require("connect-session-sequelize")(session.Store)
 // File Paths
 const routes = require("./controllers")
 const helpers = require("./utils")
-const sequelize = require("./config/connection")
+const connection = require("./config")
 
 // Constants
 const app = express()
@@ -26,7 +26,7 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new sequelize_store({
-    db: sequelize
+    db: connection
   })
 }
 
@@ -40,9 +40,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use(routes)
+//app.use(routes)
 
-sequelize.sync({ force: false }).then(function(){
+connection.sync({ force: false }).then(function(){
   app.listen(process.env.PORT || 3001, function(){
     console.log('Now listening')
   })
