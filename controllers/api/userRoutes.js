@@ -1,21 +1,24 @@
 const router = require('express').Router();
 
-// TODO: Add route to log in page
 router.get('/login', (req, res) => {
     res.render('login');
+
+    // Does this need anything else?
 });
 
-// TODO: Add route to shopping cart page
 router.get('/cart', (req, res) => {
     res.render('cart');
+
+    // TODO: If user is not logged in, redirect to log in page
 });
 
-// TODO: Add route to checkout page
+// TODO: Only display through shopping cart page and only if the user is logged in?
 router.get('/checkout', (req, res) => {
     res.render('checkout');
 });
 
-// TODO: Add route to order history page
 router.get('/orders', (req, res) => {
     res.render('orders');
+
+    // TODO: If user is not logged in, redirect to log in page
 });
