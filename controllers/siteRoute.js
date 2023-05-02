@@ -5,11 +5,17 @@ const router = require('express').Router();
 // const withAuth = require('../utils/Auth');
 
 // Attempt to set Handlebars engine
-router.set('view engine', 'hbs');
+//router.set('view engine', 'hbs');
 
 // Trying to have the default route go to the homepage
-router.get('/', (req, res) => {
-    res.render('homepage');
+router.get('/', async (req, res) => {
+  try{
+    res.render("homepage", {})
+  } catch(error){
+    res.status(500).json(error)
+  }
 });
 
 // TODO: Add route to homepage after log in
+
+module.exports = router

@@ -22,3 +22,5 @@ router.get('/orders', (req, res) => {
 
     // TODO: If user is not logged in, redirect to log in page
 });
+
+module.exports = router
