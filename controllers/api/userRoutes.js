@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 
 router.get('/login', (req, res) => {
     res.render('login');
@@ -7,9 +8,14 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/cart', (req, res) => {
-    res.render('cart');
+    // If the user is logged in, continue to Cart.
+    // If the user is not logged in, direct to Log In.
+    if (req.session.logged_in) {
+        res.render('cart');
+        return;
+    }
 
-    // TODO: If user is not logged in, redirect to log in page
+    res.render('/login');
 });
 
 // TODO: Only display through shopping cart page and only if the user is logged in?
@@ -18,7 +24,12 @@ router.get('/checkout', (req, res) => {
 });
 
 router.get('/orders', (req, res) => {
-    res.render('orders');
+    // If the user is logged in, continue to Orders.
+    // If the user is not logged in, direct to Log In.
+    if (req.session.logged_in) {
+        res.render('orders');
+        return;
+    }
 
-    // TODO: If user is not logged in, redirect to log in page
+    res.render('/login');
 });
