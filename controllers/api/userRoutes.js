@@ -30,6 +30,8 @@ router.get('/orders', (req, res) => {
         res.render('orders');
         return;
     }
-
+    // TODO: If user is not logged in, redirect to log in page
     res.render('/login');
 });
+
+module.exports = router

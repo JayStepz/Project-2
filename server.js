@@ -40,7 +40,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-//app.use(routes)
+app.use(routes)
 
 connection.sync({ force: false }).then(function(){
   app.listen(process.env.PORT || 3001, function(){
