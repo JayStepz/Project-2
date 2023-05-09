@@ -3,6 +3,14 @@ const product = require("../models/product")
 const highscore = require("../models/highscore")
 
 router.get("/", async function(request, response){
+  try{    
+    return response.render("homepage", {})
+  }catch(error){
+    return response.status(500).json(error)
+  }
+})
+
+router.get("/gameplay", async function(request, response){
   try{
     const product_data = await product.findAll()
     
@@ -10,7 +18,7 @@ router.get("/", async function(request, response){
       return data.get({plain : true})
     })
     
-    return response.render("homepage", {products})
+    return response.render("gameplay", {products})
   }catch(error){
     return response.status(500).json(error)
   }
