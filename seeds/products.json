@@ -2,7 +2,7 @@
   {
     "name" : "Apple",
     "description" : "Hello world!",
-    "price" : 0,
+    "price" : 5,
     "image_url" : ""
   },
   {
