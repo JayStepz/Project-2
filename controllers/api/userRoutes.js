@@ -1,10 +1,38 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
+const { User } = require('../../models/User');
 
-router.get('/login', (req, res) => {
-    res.render('login');
+router.post('/login', async (req,res) => {
+    try{
+        const userInput = await User.findOne({ where: {  email: req.body.email } });
+        const password =  await userInput.checkPassword({ where: { password: req.body.password}});
 
-    // Does this need anything else?
+        if(!userInput) {
+            res.status(400).json({ message:'wrong email or password'});
+            return;
+        }
+        if(!password) {
+            res.status(400).json({ message:'wrong email or password'});
+            return;
+        }
+        req.session.save(() => {
+            req.session.user_id = userInput.id;
+            req.session.logged_in= true;
+            res.json({ user: userInput, message: 'Success!'});
+        });
+    }
+    catch (err) {
+        res.status(400).json(400);
+    }
+});
+
+router.post('/', async (req,res)=> {
+    const userInput = await User.create(req.body);
+    req.session.save(()=>{
+        req.session.user_id=userInput.id;
+        req.session.logged_in=true;
+        res.status(400).json(err);
+    });
 });
 
 router.get('/cart', (req, res) => {
@@ -34,4 +62,4 @@ router.get('/orders', (req, res) => {
     res.render('/login');
 });
 
-module.exports = router
+module.exports = router;

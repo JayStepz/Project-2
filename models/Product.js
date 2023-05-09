@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
   dialect: 'mysql'
@@ -55,3 +56,5 @@ const Product = sequelize.define('product', {
 Product.sync({ force: false })
   .then(() => console.log('Product table created successfully.'))
   .catch((error) => console.error('Unable to create product table:', error));
+
+  module.exports = Product;
