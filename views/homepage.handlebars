@@ -1,10 +1,8 @@
 <section class = "container">
-  {{#each products as |product|}}
-    <section class = "col">
-      <img class="img-thumbnail" src="./assets/logo.png">
-      <h1>{{product.id}}</h1>
-      <p>{{product.description}}</p>
-      <h3>{{product.price}}</h3>
+  {{log products}}
+  {{#each products as |data|}}
+    <section class = "col d-inline-flex flex-column">
+      {{> product product=data}}
     </section>
   {{/each}}
 </section>

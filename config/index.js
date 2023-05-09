@@ -6,7 +6,7 @@ function main(){
   
   return (
     process.env.JAWSDB_URL ?
-    new sequelize(process.env.JAWSDB_URL):
+    new sequelize(process.env.JAWSDB_URL) :
     new sequelize(
       process.env.DB_NAME,
       process.env.DB_USER,

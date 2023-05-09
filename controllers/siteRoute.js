@@ -1,21 +1,35 @@
-const router = require('express').Router();
-//const { Products , User } = require('../models');
+const router = require('express').Router()
+const product = require("../models/product")
+const highscore = require("../models/highscore")
 
-// For use later. Personalized message on site to show current log in? "Welcome, USER!"
-// const withAuth = require('../utils/Auth');
-
-// Attempt to set Handlebars engine
-//router.set('view engine', 'hbs');
-
-// Trying to have the default route go to the homepage
-router.get('/', async (req, res) => {
+router.get("/", async function(request, response){
   try{
-    res.render("homepage", {})
-  } catch(error){
-    res.status(500).json(error)
+    const product_data = await product.findAll()
+    
+    const products = product_data.map(function(data){
+      return data.get({plain : true})
+    })
+    
+    return response.render("homepage", {products})
+  }catch(error){
+    return response.status(500).json(error)
   }
-});
+})
 
-// TODO: Add route to homepage after log in
+router.get("/highscores", async function(request, response){
+  try{
+    const highscore_data = await highscore.findAll().catch(function(error){
+      return response.json(error)
+    })
+    
+    const highscores = highscore_data.map(function(data){
+      return data.get({plain : true})
+    })
+    
+    return response.render("highscores", {highscores})
+  }catch(error){
+    return response.status(500).json(error)
+  }
+})
 
 module.exports = router

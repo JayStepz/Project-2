@@ -1,9 +1,9 @@
 const {Model : model, DataTypes : data_types} = require('sequelize')
 const sequelize = require('../config')
 
-class product extends model {}
+class highscore extends model {}
 
-product.init(
+highscore.init(
   {
     id: {
       type: data_types.INTEGER,
@@ -15,16 +15,8 @@ product.init(
       type: data_types.STRING,
       allowNull: false
     },
-    description: {
-      type: data_types.STRING,
-      allowNull: true
-    },
-    price: {
+    score: {
       type: data_types.INTEGER,
-      allowNull: false
-    },
-    image_url: {
-      type: data_types.STRING,
       allowNull: false
     }
   },
@@ -32,8 +24,8 @@ product.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product'
+    modelName: 'highscore'
   }
 )
 
-module.exports = product
+module.exports = highscore

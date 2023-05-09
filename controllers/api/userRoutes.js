@@ -2,7 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login', {});
 
     // Does this need anything else?
 });

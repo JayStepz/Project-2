@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "Apple",
+    "description" : "Hello world!",
+    "price" : 0,
+    "image_url" : ""
+  },
+  {
+    "name" : "Orange",
+    "description" : "Hello I am an orange!",
+    "price" : 100,
+    "image_url" : ""
+  }
+]
