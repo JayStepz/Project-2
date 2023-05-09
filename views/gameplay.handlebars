@@ -1,0 +1,8 @@
+<section class = "container">
+  {{log products}}
+  {{#each products as |data|}}
+    <section class = "col d-inline-flex flex-column">
+      {{> product product=data}}
+    </section>
+  {{/each}}
+</section>
