@@ -33,7 +33,7 @@ router.get("/highscores", async function(request, response){
     const highscores = highscore_data.map(function(data){
       return data.get({plain : true})
     })
-    
+    console.log(highscores)
     return response.render("highscores", {highscores})
   }catch(error){
     return response.status(500).json(error)
