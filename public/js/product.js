@@ -14,11 +14,18 @@ async function on_purchase_button_clicked(event){
     if(response.ok){
       response.json().then(function(score){
         score_element.innerHTML = `Spent: $${score}`
+        event.target.classList.remove("btn-success")
+        event.target.classList.add("btn-danger")
       })
     }
   }
 }
 
-document
-  .querySelector(".purchase_button")
-  .addEventListener("click", on_purchase_button_clicked)
+function setup_buttons(){
+  const product_buttons = document.querySelectorAll(".purchase_button")
+  for (let i = 0; i < product_buttons.length; i++) {
+    product_buttons[i].addEventListener("click", on_purchase_button_clicked)
+  }
+}
+
+setup_buttons()

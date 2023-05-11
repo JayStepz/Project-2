@@ -19,7 +19,7 @@ const handlebars = express_handlebars.create({helpers})
 const sess = {
   secret: "Waffles!",
   cookie: {
-    maxAge: 300000,
+    maxAge: 30000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',

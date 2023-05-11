@@ -14,6 +14,12 @@ router.post("/highscore", async function(request, response){
     name : "You",
     score : request.session.score
   }).then(function(){
+    request.session.save(function(){
+      request.session.score = 0
+      
+      return response.status(200).json()
+    })
+    
     return response.status(200).json()
   }).catch(function(error){
     return response.status(400).json(error)

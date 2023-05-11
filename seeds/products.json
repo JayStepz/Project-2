@@ -1,14 +1,68 @@
 [
   {
     "name" : "Apple",
-    "description" : "Hello world!",
+    "description" : "A delicious apple!",
     "price" : 5,
-    "image_url" : ""
+    "image_url" : "apple.png"
   },
   {
     "name" : "Orange",
-    "description" : "Hello I am an orange!",
-    "price" : 100,
-    "image_url" : ""
+    "description" : "Arent you glad I didnt say orange... wait...!",
+    "price" : 25,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Banana",
+    "description" : "Banana",
+    "price" : 15,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Watermelon",
+    "description" : "A juicy watermelon",
+    "price" : 50,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "T-Shirt",
+    "description" : "An overpriced T-Shirt for those who are into that?",
+    "price" : 10000,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Purse",
+    "description" : "Overpriced shirt? More like over priced purse!",
+    "price" : 25000,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Helmet",
+    "description" : "If you can dodge a wrench you can dodge a ball.",
+    "price" : 250,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Laptop",
+    "description" : "Start gaming now!",
+    "price" : 750,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Blue Jean",
+    "description" : "I think you could rock these.",
+    "price" : 500,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Dominos Pizza",
+    "description" : "I will not bow to any sponsor",
+    "price" : 15,
+    "image_url" : "apple.png"
+  },
+  {
+    "name" : "Taylor Swift Tickets",
+    "description" : "Why are these are way above MSRP...",
+    "price" : 100000,
+    "image_url" : "apple.png"
   }
 ]

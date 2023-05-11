@@ -17,7 +17,7 @@ async function end_round(){
 function start_round(){
   const countdown_element = document.querySelector(".countdown")
   var timer_interval
-  var time_left = 30
+  var time_left = 15
   
   countdown_element.innterHTML = `Time Left: ${time_left}`
   
