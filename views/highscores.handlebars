@@ -1,0 +1,6 @@
+<section class = "container d-flex flex-column align-items-center">
+  <h1>Highscores!</h1>
+  {{#each highscores as |data|}}
+    {{> highscore highscore=data}}
+  {{/each}}
+</section>

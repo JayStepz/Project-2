@@ -15,10 +15,11 @@ const app = express()
 
 const handlebars = express_handlebars.create({helpers})
 
+// I have no idea what any of this does
 const sess = {
   secret: "Waffles!",
   cookie: {
-    maxAge: 300000,
+    maxAge: 30000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',

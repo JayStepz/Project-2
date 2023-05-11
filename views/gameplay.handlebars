@@ -1,0 +1,10 @@
+<section class = "container">
+  {{#each products as |data|}}
+    <section class = "col-2 d-inline-flex flex-column">
+      {{> product product=data}}
+    </section>
+  {{/each}}
+</section>
+
+
+<script src="./js/gameplay.js"></script>
