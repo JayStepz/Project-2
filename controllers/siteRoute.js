@@ -17,7 +17,7 @@ router.get("/gameplay", async function(request, response){
     const products = product_data.map(function(data){
       return data.get({plain : true})
     })
-    
+    console.log("Yehooo")
     return response.render("gameplay", {products})
   }catch(error){
     return response.status(500).json(error)
