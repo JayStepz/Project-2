@@ -35,5 +35,3 @@ product.init(
     modelName: 'product'
   }
 )
-
-module.exports = product

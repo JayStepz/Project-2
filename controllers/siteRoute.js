@@ -40,4 +40,14 @@ router.get("/highscores", async function(request, response){
   }
 })
 
-module.exports = router
+router.get('/login', (req, res) => {
+  if(req.session.logged_in) {
+      res.redirect('/homepage');
+      return;
+  }
+  res.render('login');
+});
+
+// TODO: Add route to homepage after log in
+
+module.exports = router;

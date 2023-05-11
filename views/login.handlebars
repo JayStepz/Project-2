@@ -1,5 +1,46 @@
-<div class="row justify-space-between-md">
-    <div class="card-login">
-        <h2 class="card-title">Login to get in</h2>
+<body class="body bg-">
+<div class="container col-md-4 offset-md-4 shadow p-3 mb-5 bg-info rounded" id="show">
+    <div class="login-card">
+      <h2 class="page-title text-center">Login</h2>
+      <form class="form login">
+        <div class="form-group col-md-4 offset-md-4 ">
+          <label for="email-login">Email:</label>
+          <input class="form-input" type="text" id="loginEmail" />
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+          <label for="password-login">Password:</label>
+          <input class="form-input" type="password" id="loginPassword" />
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-primary " type="submit">login</button>
+        </div>
+      </form>
     </div>
+    <button type="button" class="btn btn-link col-md-4 offset-md-4" id="sign">Click here to sign up!</button>
 </div>
+
+
+<div class="container col-md-4 offset-md-4 shadow p-3 mb-5 bg-info rounded" id="hide">    
+    <div class="login-cards">
+      <h2 class="page-title text-center">Signup</h2>
+      <form class="form signup">
+        <div class="form-group col-md-4 offset-md-4">
+          <label for="username-signup">Username:</label>
+          <input class="form-input" type="text" id="signup-user" />
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+          <label for="email-signup">Email:</label>
+          <input class="form-input" type="text" id="signup-email" />
+        </div>
+        <div class="form-group col-md-4 offset-md-4">
+          <label for="password-signup">Password:</label>
+          <input class="form-input" type="password" id="signup-pass" />
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+      </form>
+    </div>
+    <button type="button" class="btn btn-link col-md-4 offset-md-4" id= "logIn">Already signed up?</button>
+  </div>
+</body>

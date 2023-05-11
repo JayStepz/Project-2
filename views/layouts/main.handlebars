@@ -11,6 +11,11 @@
 
 <body>
   <header>
+     {{#if logged_in}}
+        <a href="./logout.js">Logout</a>
+        {{else}}
+        <a href="/login">Login</a> 
+        {{/if}}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <section class="container-fluid d-flex justify-content-between">
         <img class="img-thumbnail" style="width: 7.5%" src="./assets/logo.png">
